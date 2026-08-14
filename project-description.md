@@ -66,11 +66,11 @@ Each category contains minimum 2, maximum 4 mini test projects using one of the 
 
 This Test Project uses the following composition:
 
-| Category              | Mini Test Projects        | Pattern         | Points |
-| --------------------- | ------------------------- | --------------- | ------ |
-| Design Implementation | A1 (L1), A2 (L1), A3 (L2) | 2 x L1 + 1 x L2 | 3      |
-| Front-end Development | B1 (L1), B2 (L3), B2 (L1) | 2 x L1 + 1 x L3 | 3.75   |
-| Back-end Development  | C1 (L1), C2 (L2)          | 1 x L1 + 1 x L2 | 2.25   |
+| Category              | Mini Test Projects               | Pattern         | Points |
+| --------------------- | -------------------------------- | --------------- | ------ |
+| Design Implementation | A1 (L1), A2 (L1), A3 (L2)        | 2 x L1 + 1 x L2 | 3      |
+| Front-end Development | B1 (L1), B2 (L3), B3 (L1)        | 2 x L1 + 1 x L3 | 3.75   |
+| Back-end Development  | C1 (L1), C2 (L2)                 | 1 x L1 + 1 x L2 | 2.25   |
 
 ## Requirements
 
@@ -269,6 +269,6 @@ The mark distribution for this project is as follows:
 | 1            | Work organization and self-management  | 2      |
 | 2            | Communication and interpersonal skills | 1      |
 | 3            | Design Implementation                  | 3      |
-| 4            | Front-End Development                  | 3      |
-| 5            | Back-End Development                   | 3      |
+| 4            | Front-End Development                  | 3.75   |
+| 5            | Back-End Development                   | 2.25   |
 | **Total**    |                                        | 12     |

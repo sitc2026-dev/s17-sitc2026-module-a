@@ -13,10 +13,10 @@
       "aspects": [
         {
           "type": "measurement",
-          "description": "Mini Test Projects are in separate self-contained folders A1, A2, A3, B1, B2, C1, C2, and C3",
+          "description": "Mini Test Projects are in separate self-contained folders A1, A2, A3, B1, B2, B3, C1, and C2",
           "maxMark": 0.25,
           "wsosSection": 1,
-          "extraDescription": "Test: Open the submission root. Confirm folders A1, A2, A3, B1, B2, C1, C2, and C3 exist, each holds that mini Test Project’s files, and there are no extra unrelated mini-project folders.",
+          "extraDescription": "Test: Open the submission root. Confirm folders A1, A2, A3, B1, B2, B3, C1, and C2 exist, each holds that mini Test Project’s files, and there are no extra unrelated mini-project folders.",
           "calculation": { "type": "pass-or-fail" }
         },
         {
@@ -24,7 +24,7 @@
           "description": "At least one git commit exists for each of the eight mini Test Projects",
           "maxMark": 0.75,
           "wsosSection": 1,
-          "extraDescription": "Test: Run git log --oneline in the submission. Pass if there is at least one commit attributable to each of A1, A2, A3, B1, B2, C1, C2, and C3 (message and/or changed paths).",
+          "extraDescription": "Test: Run git log --oneline in the submission. Pass if there is at least one commit attributable to each of A1, A2, A3, B1, B2, B3, C1, and C2 (message and/or changed paths).",
           "calculation": { "type": "pass-or-fail" }
         },
         {
@@ -44,7 +44,7 @@
           "description": "Index page links to every mini Test Project",
           "maxMark": 0.5,
           "wsosSection": 2,
-          "extraDescription": "Test: Open index.html in Google Chrome. Follow each link and confirm A1, A2, A3, B1, B2, C1, C2, and C3 load (C1–C3 may require php -S from that folder or the submission root).",
+          "extraDescription": "Test: Open index.html in Google Chrome. Follow each link and confirm A1, A2, A3, B1, B2, B3, C1, and C2 load (C1 and C2 may require php -S from that folder or the submission root).",
           "calculation": { "type": "pass-or-fail" }
         },
         {
@@ -73,7 +73,7 @@
           "description": "Empty unfocused input shows the label inside the field",
           "maxMark": 0.25,
           "wsosSection": 3,
-          "extraDescription": "Test: Open A1 in Chrome with JavaScript disabled if possible. With the field empty and not focused, the label sits inside the input, matching assets/A1/input.mp4. No JavaScript is required.",
+          "extraDescription": "Test: Open A1 in Chrome. With the field empty and not focused, the label sits inside the input, matching assets/A1/input.mp4. No JavaScript is required.",
           "calculation": { "type": "pass-or-fail" }
         },
         {
@@ -124,67 +124,67 @@
       ]
     },
     {
-      "name": "A3 Toast Notification",
+      "name": "A3 3D Can Rotation Effect",
       "aspects": [
         {
           "type": "measurement",
-          "description": "Success button shows a green toast with the required title and message",
+          "description": "The can is displayed in the centre with the wrapper on top",
           "maxMark": 0.5,
           "wsosSection": 3,
-          "extraDescription": "Test: Click Success. A green toast appears with title “Success!” and message “Your message has been sent successfully.” HTML/CSS only (checkbox, radio, or :target).",
+          "extraDescription": "Test: Open A3. A can is centred on the screen. The wrapper image (assets/A3/wrapping.png) sits on top of the can mockup (assets/A3/can-mockup.png). HTML/CSS only.",
           "calculation": { "type": "pass-or-fail" }
         },
         {
           "type": "measurement",
-          "description": "Fail button shows a red toast with the required title and message",
+          "description": "Page background uses the specified radial gradient",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Inspect computed/background CSS. Background is radial-gradient(at 50%, #081718 -20%, #28aeb4 90%) or a visually matching equivalent.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "The wrapper is correctly applied to the can",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Compare with assets/A3/example.mov. The wrapping graphic follows the can shape (masked or mapped onto the mockup), not a flat rectangle beside it.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Hovering the can plays the rotation and scaling animation",
           "maxMark": 0.5,
           "wsosSection": 3,
-          "extraDescription": "Test: Click Fail. A red toast appears with title “Error!” and message “Change a few things up and try submitting again.”",
-          "calculation": { "type": "pass-or-fail" }
-        },
-        {
-          "type": "measurement",
-          "description": "Each toast appears with an animation",
-          "maxMark": 0.25,
-          "wsosSection": 3,
-          "extraDescription": "Test: Click Success then Fail. Each toast animates into view (not an instant pop with no motion).",
-          "calculation": { "type": "pass-or-fail" }
-        },
-        {
-          "type": "measurement",
-          "description": "Close control hides the toast with an animation",
-          "maxMark": 0.25,
-          "wsosSection": 3,
-          "extraDescription": "Test: Show a toast, then click its close control. The toast hides with an animation. HTML/CSS only.",
+          "extraDescription": "Test: Hover the can. It rotates and scales as in the example video. The effect is CSS-only (no JavaScript).",
           "calculation": { "type": "pass-or-fail" }
         }
       ]
     },
     {
-      "name": "B1 Number Counter Animation",
+      "name": "B1 World's Tallest Buildings",
       "aspects": [
         {
           "type": "measurement",
-          "description": "Page shows at least three counters, each with a number and a label",
+          "description": "All buildings from the provided data are rendered on the page",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Open B1. At least three counters are visible, each pairing a numeric value with a label.",
+          "extraDescription": "Test: Open B1. Five towers from assets/B1/buildings.js appear: Burj Khalifa, Merdeka 118, Canton Tower, Taipei 101, Oriental Pearl Tower, using the images in assets/B1/towers/.",
           "calculation": { "type": "pass-or-fail" }
         },
         {
           "type": "measurement",
-          "description": "Counters count from 0 to the data-target value (not hard-coded in JavaScript)",
+          "description": "Buildings are aligned to the bottom of the page as a skyline",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Reload the page. Numbers start at 0 and increase to each element’s data-target. Inspect the script: target values are read from data-target, not literal numbers in JS.",
+          "extraDescription": "Test: The towers stand side by side with their bases on a common bottom line (bottom of the page/viewport).",
           "calculation": { "type": "pass-or-fail" }
         },
         {
           "type": "measurement",
-          "description": "Count lasts about 2 seconds and stops on the exact target",
+          "description": "Buildings are sorted tallest-first and scaled with the tallest at 800px",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Reload and watch. Animation is about 2 seconds. Final displayed value equals data-target exactly (no overshoot or leftover decimals unless the target itself is decimal).",
+          "extraDescription": "Test: Left-to-right (or document order) is tallest first: Burj Khalifa (828 m) is 800px tall. Others keep aspect ratio and scale by height/828 (Merdeka 118 ≈ 656px, Canton Tower ≈ 584px, Taipei 101 ≈ 491px, Oriental Pearl ≈ 452px). Allow a few pixels of rounding.",
           "calculation": { "type": "pass-or-fail" }
         }
       ]
@@ -221,7 +221,7 @@
           "description": "Off button stops the song and returns platter and tone-arm to the rest state",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Start playback, then click Off. Audio stops (not merely paused mid-track with motion still running). Platter rotation and tone-arm return to the original rest state.",
+          "extraDescription": "Test: Start playback, then click Off. Audio stops. Platter rotation and tone-arm return to the original rest state.",
           "calculation": { "type": "pass-or-fail" }
         },
         {
@@ -246,6 +246,27 @@
           "maxMark": 0.25,
           "wsosSection": 4,
           "extraDescription": "Test: Seek near the end of a track or wait until it finishes. The tone-arm animation returns to the rest position.",
+          "calculation": { "type": "pass-or-fail" }
+        }
+      ]
+    },
+    {
+      "name": "B3 Lines and Dots Animation",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Forty dots appear with random position, size, and colour from the provided array",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "extraDescription": "Test: Open B3 (starter in assets/B3/index.html). Count about 40 dots. Colours are from [\"#47C2E3\", \"#FEC85B\", \"#0064A8\", \"#1cc8cf\"]. Reload: positions, sizes, and colours randomise again.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Moving the cursor produces the lines-and-dots animation from the example video",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Move the pointer around the page. Lines and dots react as in assets/B3/example.mov (no server required).",
           "calculation": { "type": "pass-or-fail" }
         }
       ]
@@ -280,43 +301,14 @@
       ]
     },
     {
-      "name": "C2 Countries and Cities",
-      "aspects": [
-        {
-          "type": "measurement",
-          "description": "Country options are loaded from countries.json and are not hard-coded",
-          "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "Test: Open C2 via PHP. Country select lists names from assets/C2/countries.json (spot-check Afghanistan and Hungary). Inspect source: country names are not hard-coded in HTML/JS.",
-          "calculation": { "type": "pass-or-fail" }
-        },
-        {
-          "type": "measurement",
-          "description": "Selecting a country fills the City select with that country’s cities",
-          "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "Test: Choose Hungary. City options become that country’s cities from countries.json (for example Budapest). Choose Albania and confirm the city list changes.",
-          "calculation": { "type": "pass-or-fail" }
-        },
-        {
-          "type": "measurement",
-          "description": "City select has no selectable city until a country is chosen, and changing country resets the city",
-          "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "Test: On load, City has no selectable city. Select a country and a city, then select a different country. The previous city is cleared.",
-          "calculation": { "type": "pass-or-fail" }
-        }
-      ]
-    },
-    {
-      "name": "C3 API Request Logger",
+      "name": "C2 API Request Logger",
       "aspects": [
         {
           "type": "measurement",
           "description": "Endpoint accepts POST with Content-Type application/json",
           "maxMark": 0.25,
           "wsosSection": 5,
-          "extraDescription": "Test: php -S from C3. POST the URL from README.txt with header Content-Type: application/json and body {\"message\":\"hello\"}. Response is success (2xx).",
+          "extraDescription": "Test: php -S from C2. POST the URL from README.txt with header Content-Type: application/json and body {\"message\":\"hello\"}. Response is success (2xx).",
           "calculation": { "type": "pass-or-fail" }
         },
         {
@@ -329,10 +321,10 @@
         },
         {
           "type": "measurement",
-          "description": "Log file name contains the hour, minute, and second of the request",
+          "description": "Log file name uses the HH-MM-SS-request.txt format",
           "maxMark": 0.25,
           "wsosSection": 5,
-          "extraDescription": "Test: Compare the file name to the time of the POST. Required form is HH:MM:SS-request.txt. On Windows, HH-MM-SS-request.txt is acceptable if colons are illegal in file names.",
+          "extraDescription": "Test: Compare the new file name to the time of the POST. It matches HH-MM-SS-request.txt (hour-minute-second, hyphens, not colons).",
           "calculation": { "type": "pass-or-fail" }
         },
         {
@@ -356,7 +348,7 @@
           "description": "README.txt documents the URL to call and where log files are stored",
           "maxMark": 0.25,
           "wsosSection": 5,
-          "extraDescription": "Test: Open C3/README.txt. It states the URL (or path) to POST and the folder where HH:MM:SS-request.txt (or equivalent) files are written.",
+          "extraDescription": "Test: Open C2/README.txt. It states the URL (or path) to POST and the folder where HH-MM-SS-request.txt files are written.",
           "calculation": { "type": "pass-or-fail" }
         }
       ]
