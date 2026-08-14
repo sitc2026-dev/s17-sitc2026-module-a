@@ -16,7 +16,7 @@ You must create and organize a collection of **mini speed Test Projects** for Mo
 
 - **Design implementation tasks** using HTML and CSS.
 - **Front-end development tasks** with HTML, CSS, and JavaScript.
-- **Back-end development tasks** involving simple web application behaviour and API-related configurations.
+- **Back-end development tasks** with PHP, involving simple web application behaviour and API-related configurations.
 
 Each mini Test Project is delivered as a separate folder with its own media files and, in some cases, starter code. You must:
 
@@ -33,12 +33,12 @@ Deliver your work using the following structure, where each folder is named afte
 ├── index.html   Index page linking to every mini Test Project
 ├── A1/          Floating Label
 ├── A2/          Progress Animation
-├── A3/          Toast Notification
-├── B1/          Number Counter Animation
+├── A3/          3D Can Rotation Effect
+├── B1/          World's Tallest Buildings
 ├── B2/          Turntable
+├── B3/          Lines and Dots Animation
 ├── C1/          Registration Form Validation
-├── C2/          Countries and Cities
-└── C3/          API Request Logger
+└── C2/          API Request Logger
 ```
 
 The media files of each mini Test Project are provided under `assets/<identifier>/`, for example `assets/A1/`. Copy the media files you need into your own mini Test Project folders.
@@ -66,11 +66,11 @@ Each category contains minimum 2, maximum 4 mini test projects using one of the 
 
 This Test Project uses the following composition:
 
-| Category               | Mini Test Projects        | Pattern           | Points |
-| ---------------------- | ------------------------- | ----------------- | ------ |
-| Design Implementation  | A1 (L1), A2 (L1), A3 (L2) | 2 x L1 + 1 x L2   | 3      |
-| Front-end Development  | B1 (L1), B2 (L3)          | 1 x L1 + 1 x L3   | 3      |
-| Back-end Development   | C1 (L1), C2 (L1), C3 (L2) | 2 x L1 + 1 x L2   | 3      |
+| Category              | Mini Test Projects        | Pattern         | Points |
+| --------------------- | ------------------------- | --------------- | ------ |
+| Design Implementation | A1 (L1), A2 (L1), A3 (L2) | 2 x L1 + 1 x L2 | 3      |
+| Front-end Development | B1 (L1), B2 (L3), B2 (L1) | 2 x L1 + 1 x L3 | 3.75   |
+| Back-end Development  | C1 (L1), C2 (L2)          | 1 x L1 + 1 x L2 | 2.25   |
 
 ## Requirements
 
@@ -123,44 +123,41 @@ The progress bar width must be **0%** when the page is scrolled to the top and *
 
 #### A3: Toast Notification (Level 2)
 
-Implement a **toast notification** that appears with an animation when the user clicks a success or fail button. Use only HTML and CSS.
+Using CSS only, create the 3D Can Rotation Effect, as shown in the video example.
 
-No media files are provided for this mini Test Project. Closing a toast must be solved with a CSS-only technique, for example a checkbox or the `:target` pseudo-class.
+Initially, the can appears on the center of the screen. The background is `background: radial-gradient(at 50%, #081718 -20%, #28aeb4 90%);`. When the user hovers over the can, it triggers the rotation and scaling animation.
 
-- **Success** notification (green):
-  - Title: `Success!`
-  - Message: `Your message has been sent successfully.`
-- **Fail** notification (red):
-  - Title: `Error!`
-  - Message: `Change a few things up and try submitting again.`
+In the media files, you are provided with a video example, a can mockup, and a wrapper that you have to put on the can. Please match the effect seen in the video example as closely as possible.
 
 **Requirement notes**
 
-- Clicking the success button shows the green success toast with the required title and message.
-- Clicking the fail button shows the red fail toast with the required title and message.
-- Each toast appears with an animation.
-- Clicking the close control hides the given toast with an animation.
-- The component is implemented with HTML and CSS only, without JavaScript.
+- The can is displayed with the wrapper on top.
+- The correct colors are set.
+- The wrapper is correctly applied to the can.
+- The can rotates when you hover over it.
 
 ### Front-end Development
 
 Tasks in this category add **client-side behaviour with JavaScript**, together with HTML and CSS. The listed interactions must work in the browser without any server-side logic. Use the provided starter code and media files where they are given.
 
-#### B1: Number Counter Animation (Level 1)
+#### B1: World's Tallest Buildings (Level 1)
 
-Implement a statistics block in which the numbers **count up** from zero when the page loads.
+You are provided with a JavaScript file containing data about some of the world's tallest buildings, and an image for each tower.
 
-- Reference video: `assets/B1/counter.mp4`
+Using that data, dynamically render the buildings on the page as a skyline:
 
-The page must display at least **three** counters, each with a number and a label. The target value of every counter must be stored in a `data-target` attribute of the element, so that the values can be changed without modifying the JavaScript code.
+1. Sort the buildings by height, tallest first.
+2. Scale each image so the tallest building is 800px tall, and the others are sized in proportion to their real height.
+3. Keep each image's aspect ratio.
+4. Align all buildings to the bottom of the page.
+
+The result should look like a line of towers standing side by side, with correct scaling and height.
 
 **Requirement notes**
 
-- The page displays at least three counters, each with a number and a label.
-- Each counter starts from 0 when the page loads and increases to its target value.
-- The target values are read from the `data-target` attribute of the elements and are not hard-coded in the JavaScript code.
-- The counting animation of each counter takes about 2 seconds and stops exactly on the target value.
-- The counting is implemented with JavaScript, and the numbers are updated in the DOM.
+- The buildings are rendered on the screen.
+- The buildings are aligned correctly.
+- The buildings are the correct height.
 
 #### B2: Turntable (Level 3)
 
@@ -183,6 +180,19 @@ The provided page already contains a **platter** (`.wheel`), a **tone-arm**, an 
 - Pressing the **next (`>>`)** button switches to the other provided audio track.
 - When a song ends, the tone-arm animation returns to its original state.
 - The turntable works in the browser without server-side logic.
+
+#### B3: Lines and Dots Animation (Level 1)
+
+You are provided with some basic styles for the website. Using this as a base, try to replicate the lines and dots animation effect you see in the video example.
+
+There are 40 dots. They are randomly positioned and sized when the page is refreshed. The colors are also randomly picked from the provided array.
+
+The effect happens when the user moves the cursor around on the screen.
+
+**Requirement notes**
+
+- The dots appear randomly in terms of both position and color. The color is chosen from the array.
+- The lines and dots animation effect works properly.
 
 ### Back-end Development
 
@@ -220,25 +230,11 @@ Validation messages:
 - If the checkbox is not checked, the message `You must agree before submitting.` is displayed.
 - If every field is valid, the page displays `Success`.
 
-#### C2: Countries and Cities (Level 1)
-
-Implement a **Country** select input and a **City** select input whose options come from the provided data file.
-
-- Data file: `assets/C2/countries.json`
-
-**Requirement notes**
-
-- The options of the Country select are loaded from the provided `countries.json` file.
-- When a country is selected, the options of the City select are updated to the cities of that country.
-- No country or city name is hard-coded in the source code.
-- Until a country is selected, the City select contains no selectable city.
-- Selecting a different country resets the previously selected city.
-
-#### C3: API Request Logger (Level 2)
+#### C2: API Request Logger (Level 2)
 
 Create a **PHP endpoint** that accepts a POST request with an `application/json` payload and logs every call into a separate file.
 
-Each time the endpoint is called, the request body must be stored in a text file in the log folder, named `HH:MM:SS-request.txt`, where `HH`, `MM`, and `SS` are replaced with the current hour, minute, and second of the request. Create a `README.txt` file that documents which URL the assessor has to call and where the log files are stored.
+Each time the endpoint is called, the request body must be stored in a text file in the log folder, named `HH-MM-SS-request.txt`, where `HH`, `MM`, and `SS` are replaced with the current hour, minute, and second of the request. Create a `README.txt` file that documents which URL the assessor has to call and where the log files are stored.
 
 No media files are provided for this mini Test Project.
 
