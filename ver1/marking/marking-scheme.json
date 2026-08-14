@@ -1,0 +1,365 @@
+{
+  "totalMark": 12,
+  "wsosSections": {
+    "1": "Work organization and self-management",
+    "2": "Communication and interpersonal skills",
+    "3": "Design Implementation",
+    "4": "Front-End Development",
+    "5": "Back-End Development"
+  },
+  "subCriterions": [
+    {
+      "name": "Project structure and index",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Mini Test Projects are in separate self-contained folders A1, A2, A3, B1, B2, C1, C2, and C3",
+          "maxMark": 0.25,
+          "wsosSection": 1,
+          "extraDescription": "Test: Open the submission root. Confirm folders A1, A2, A3, B1, B2, C1, C2, and C3 exist, each holds that mini Test Project’s files, and there are no extra unrelated mini-project folders.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "At least one git commit exists for each of the eight mini Test Projects",
+          "maxMark": 0.75,
+          "wsosSection": 1,
+          "extraDescription": "Test: Run git log --oneline in the submission. Pass if there is at least one commit attributable to each of A1, A2, A3, B1, B2, C1, C2, and C3 (message and/or changed paths).",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "judgement",
+          "description": "Git commit messages are readable and easy to understand",
+          "maxMark": 1,
+          "wsosSection": 1,
+          "judgementScoreDescription": [
+            "Commit messages are missing, one-word placeholders such as “update”, or do not describe the change.",
+            "Messages are short single lines that name the mini Test Project but do not explain what was implemented.",
+            "Messages name the mini Test Project and the change, but wording is vague, repeated, or hard to follow without reading the diff.",
+            "Each relevant commit has a clear subject (and body if needed) so a reader can tell what was implemented without opening the diff."
+          ]
+        },
+        {
+          "type": "measurement",
+          "description": "Index page links to every mini Test Project",
+          "maxMark": 0.5,
+          "wsosSection": 2,
+          "extraDescription": "Test: Open index.html in Google Chrome. Follow each link and confirm A1, A2, A3, B1, B2, C1, C2, and C3 load (C1–C3 may require php -S from that folder or the submission root).",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Index page shows a thumbnail for each mini Test Project",
+          "maxMark": 0.25,
+          "wsosSection": 2,
+          "extraDescription": "Test: On the index page, each of the eight mini Test Projects has a visible thumbnail image or graphic preview.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Index page shows a title for each mini Test Project",
+          "maxMark": 0.25,
+          "wsosSection": 2,
+          "extraDescription": "Test: On the index page, each of the eight mini Test Projects has a readable title (for example Floating Label, Turntable).",
+          "calculation": { "type": "pass-or-fail" }
+        }
+      ]
+    },
+    {
+      "name": "A1 Floating Label",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Empty unfocused input shows the label inside the field",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Open A1 in Chrome with JavaScript disabled if possible. With the field empty and not focused, the label sits inside the input, matching assets/A1/input.mp4. No JavaScript is required.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "On focus the label moves to the top edge and becomes smaller",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Click or tab into the empty input. The label animates to the top edge of the field, becomes smaller, and changes colour. HTML/CSS only.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Label stays floating after blur when the input contains text",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Type text, then click outside the field. The label remains in the floating position. Clear the text and blur again: the label returns inside the field.",
+          "calculation": { "type": "pass-or-fail" }
+        }
+      ]
+    },
+    {
+      "name": "A2 Progress Animation",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "A progress bar is fixed at the top of the viewport on the provided page",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Open A2 (based on assets/A2/index.html). A bar is visible in a fixed position at the top of the viewport. No JavaScript is used for the effect.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Progress bar width is 0% when the page is scrolled to the top",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Scroll to the very top. The bar width is 0% (not filled).",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Progress bar reaches 100% at the bottom and follows scroll in between",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Scroll through the page. The bar grows with scroll position and is 100% wide at the bottom.",
+          "calculation": { "type": "pass-or-fail" }
+        }
+      ]
+    },
+    {
+      "name": "A3 Toast Notification",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Success button shows a green toast with the required title and message",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "Test: Click Success. A green toast appears with title “Success!” and message “Your message has been sent successfully.” HTML/CSS only (checkbox, radio, or :target).",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Fail button shows a red toast with the required title and message",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "Test: Click Fail. A red toast appears with title “Error!” and message “Change a few things up and try submitting again.”",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Each toast appears with an animation",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Click Success then Fail. Each toast animates into view (not an instant pop with no motion).",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Close control hides the toast with an animation",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Show a toast, then click its close control. The toast hides with an animation. HTML/CSS only.",
+          "calculation": { "type": "pass-or-fail" }
+        }
+      ]
+    },
+    {
+      "name": "B1 Number Counter Animation",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Page shows at least three counters, each with a number and a label",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Open B1. At least three counters are visible, each pairing a numeric value with a label.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Counters count from 0 to the data-target value (not hard-coded in JavaScript)",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Reload the page. Numbers start at 0 and increase to each element’s data-target. Inspect the script: target values are read from data-target, not literal numbers in JS.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Count lasts about 2 seconds and stops on the exact target",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Reload and watch. Animation is about 2 seconds. Final displayed value equals data-target exactly (no overshoot or leftover decimals unless the target itself is decimal).",
+          "calculation": { "type": "pass-or-fail" }
+        }
+      ]
+    },
+    {
+      "name": "B2 Turntable",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Pressing the platter starts playback of a provided audio track",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "extraDescription": "Test: Open B2 (starter HTML/CSS/images/audio). Click .wheel. One of DrunkonSoju.wav or LostSomewhere.wav starts playing. No server is required.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Platter rotates while the song is playing",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Start playback. The platter (.wheel) rotates, matching assets/B2/video/turntable.mp4.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Tone-arm moves above the platter while the song is playing",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Start playback. The tone-arm moves over the platter as in the reference video.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Off button stops the song and returns platter and tone-arm to the rest state",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "extraDescription": "Test: Start playback, then click Off. Audio stops (not merely paused mid-track with motion still running). Platter rotation and tone-arm return to the original rest state.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Volume control ranges from 0 to 1 and changes the playback volume",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: While a track plays, move the volume range. Min is 0, max is 1. Audible level changes with the control.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Next button switches to the other provided audio track",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Play a track, then click >>. Playback switches between DrunkonSoju.wav and LostSomewhere.wav.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "When a song ends, the tone-arm returns to its original state",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Seek near the end of a track or wait until it finishes. The tone-arm animation returns to the rest position.",
+          "calculation": { "type": "pass-or-fail" }
+        }
+      ]
+    },
+    {
+      "name": "C1 Registration Form Validation",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Form loads with empty fields and no validation feedback",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: php -S localhost:8080 from C1 (or the submission root). Open the form. First name, Last name, and the checkbox are empty/unchecked. No “Looks good!” or error messages are shown yet.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Server-side name validation uses a–z/A–Z only and the required messages",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: Submit first name “Jane” and last name “1234”. Valid field shows “Looks good!”. Invalid field shows “Please provide a valid name.”. Repeat with a POST of invalid data (curl or DevTools) to confirm rejection is server-side, not only HTML required/pattern.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Unchecked checkbox shows the required message; all-valid submit displays Success",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: Valid names, checkbox off → “You must agree before submitting.”. Valid names plus checked checkbox → page displays “Success”.",
+          "calculation": { "type": "pass-or-fail" }
+        }
+      ]
+    },
+    {
+      "name": "C2 Countries and Cities",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Country options are loaded from countries.json and are not hard-coded",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: Open C2 via PHP. Country select lists names from assets/C2/countries.json (spot-check Afghanistan and Hungary). Inspect source: country names are not hard-coded in HTML/JS.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Selecting a country fills the City select with that country’s cities",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: Choose Hungary. City options become that country’s cities from countries.json (for example Budapest). Choose Albania and confirm the city list changes.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "City select has no selectable city until a country is chosen, and changing country resets the city",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: On load, City has no selectable city. Select a country and a city, then select a different country. The previous city is cleared.",
+          "calculation": { "type": "pass-or-fail" }
+        }
+      ]
+    },
+    {
+      "name": "C3 API Request Logger",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Endpoint accepts POST with Content-Type application/json",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: php -S from C3. POST the URL from README.txt with header Content-Type: application/json and body {\"message\":\"hello\"}. Response is success (2xx).",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Each accepted call is stored in a separate file in the log folder",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: Send two successful POSTs. Two distinct new files appear in the log folder named in README.txt.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Log file name contains the hour, minute, and second of the request",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: Compare the file name to the time of the POST. Required form is HH:MM:SS-request.txt. On Windows, HH-MM-SS-request.txt is acceptable if colons are illegal in file names.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Stored log file contains the received JSON payload",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: Open the file created by the hello POST. It contains the JSON body (at least {\"message\":\"hello\"}).",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "Non-POST or non-JSON requests are rejected with an appropriate HTTP status",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: GET the endpoint → 4xx/405. POST with Content-Type text/plain (or no JSON type) → 4xx/415. No new success log file is created for those calls.",
+          "calculation": { "type": "pass-or-fail" }
+        },
+        {
+          "type": "measurement",
+          "description": "README.txt documents the URL to call and where log files are stored",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Test: Open C3/README.txt. It states the URL (or path) to POST and the folder where HH:MM:SS-request.txt (or equivalent) files are written.",
+          "calculation": { "type": "pass-or-fail" }
+        }
+      ]
+    }
+  ]
+}
