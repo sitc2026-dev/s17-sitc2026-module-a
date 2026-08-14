@@ -121,7 +121,7 @@ The progress bar width must be **0%** when the page is scrolled to the top and *
 - The progress bar width follows the scroll position between those two extremes.
 - The effect is implemented with HTML and CSS only, without JavaScript.
 
-#### A3: Toast Notification (Level 2)
+#### A3: 3D Can Rotation Effect (Level 2)
 
 Using CSS only, create the 3D Can Rotation Effect, as shown in the video example.
 
