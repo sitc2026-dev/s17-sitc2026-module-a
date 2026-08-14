@@ -270,9 +270,9 @@ The mark distribution for this project is as follows:
 
 | WSOS SECTION | Description                            | Points |
 | ------------ | -------------------------------------- | ------ |
-| 1            | Work organization and management       | 2      |
+| 1            | Work organization and self-management  | 2      |
 | 2            | Communication and interpersonal skills | 1      |
-| 3            | Design implementation                  | 3      |
-| 4            | Front-end development                  | 3      |
-| 5            | Back-end development                   | 3      |
+| 3            | Design Implementation                  | 3      |
+| 4            | Front-End Development                  | 3      |
+| 5            | Back-End Development                   | 3      |
 | **Total**    |                                        | 12     |
